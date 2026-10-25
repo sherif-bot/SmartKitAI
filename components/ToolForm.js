@@ -1,4 +1,4 @@
-
+٨
 "use client";
 
 import { useState } from "react";
@@ -26,7 +26,7 @@ export default function ToolForm({ toolId = "assistant" }) {
         throw new Error(data.error || "Une erreur est survenue.");
       }
 
-      setResult(data.text || "Aucun résultat reçu.");
+      setResult(data.result || data.text || "Aucun résultat généré.");
     } catch (error) {
       setResult(error.message || "Impossible de générer le contenu.");
     } finally {
